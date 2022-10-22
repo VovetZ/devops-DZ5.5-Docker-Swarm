@@ -26,4 +26,4 @@ docker node ls
 ```
 ## Ответ
 
-[Screenshot](pic/5.5-node-ls.PNG)
+![IMG](pic/5.5-node-ls.PNG)
