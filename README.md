@@ -39,3 +39,17 @@ docker service ls
 ## Ответ
 
 ![IMG](pic/5.5-service-ls.PNG)
+
+## Задача 4 (*)
+
+Выполнить на лидере Docker Swarm кластера команду (указанную ниже) и дать письменное описание её функционала, что она делает и зачем она нужна:
+```
+# см.документацию: https://docs.docker.com/engine/swarm/swarm_manager_locking/
+docker swarm update --autolock=true
+```
+
+## Ответ
+
+--autolock=true обязывает вводить ключ разблокировки на ноде, чтобы она могла заново присоединиться к кластеру, если была перезапущена. Docker swarm шифрует логи raft и трафик между нодам. Когда Docker перезапускается, он автоматически загружает эту информацию. Команда docker swarm update --autolock=true позволяет блокировать функцию загрузки при запуске/перезапуске docker и в этом случае, для загрузки docker, будет необходимо разблокировать docker при помощи команды docker swarm unlock и ключа предоставленного во время выполнения команды docker swarm update --autolock=true
+![IMG](pic/5.5-swarm-unlock.PNG)
+
