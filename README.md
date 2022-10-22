@@ -38,4 +38,4 @@ docker service ls
 ```
 ## Ответ
 
-[Screenshot](pic/5.5-service-ls.PNG)
+![IMG](pic/5.5-service-ls.PNG)
